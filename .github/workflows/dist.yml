@@ -49,7 +49,7 @@ jobs:
       # SPKGs to install as system packages
       SPKGS: _bootstrap _prereq
       # Non-Python packages to install as spkgs
-      TARGETS_PRE: flint
+      TARGETS_PRE: flint mpfi
       #
       CIBW_ARCHS: ${{ matrix.arch }}
       # https://cibuildwheel.readthedocs.io/en/stable/options/#requires-python
