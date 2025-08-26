@@ -43,6 +43,9 @@ or
 
     sage -pip install --user --no-build-isolation git+https://github.com/mkauers/ore_algebra.git
 
+Note the important `--no-build-isolation` flag, which causes `pip` to use the
+installed Sage library while building the package.
+
 The optional `--user` flag causes the package to be installed in your `.sage`
 directory instead of the Sage installation tree.
 
