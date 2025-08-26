@@ -48,7 +48,7 @@ directory instead of the Sage installation tree.
 
 Alternatively, run (square brackets indicate optional flags)
 
-    sage -pip install [--user] [--editable] --no-build-isolation .
+    sage -pip install [--user] --no-build-isolation [--editable] .
 
 from the root of a local git checkout. The `--editable` flag causes the
 "installed" version to point to your local checkout, making it easier,
