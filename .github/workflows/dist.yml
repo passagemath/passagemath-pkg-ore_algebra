@@ -53,7 +53,7 @@ jobs:
       #
       CIBW_ARCHS: ${{ matrix.arch }}
       # https://cibuildwheel.readthedocs.io/en/stable/options/#requires-python
-      CIBW_PROJECT_REQUIRES_PYTHON: ">=3.9"
+      CIBW_PROJECT_REQUIRES_PYTHON: ">=3.10, <3.14"
       # Environment during wheel build
       CIBW_ENVIRONMENT: "PATH=$(pwd)/local/bin:$PATH CPATH=$(pwd)/local/include:$CPATH LIBRARY_PATH=$(pwd)/local/lib:$LIBRARY_PATH LD_LIBRARY_PATH=$(pwd)/local/lib:$LD_LIBRARY_PATH PKG_CONFIG_PATH=$(pwd)/local/share/pkgconfig:$PKG_CONFIG_PATH ACLOCAL_PATH=/usr/share/aclocal"
       CIBW_REPAIR_WHEEL_COMMAND_LINUX: "set -x && export LD_LIBRARY_PATH=$(pwd)/prefix/lib:$LD_LIBRARY_PATH && auditwheel -v -v -v -v repair -w {dest_dir} {wheel}"
